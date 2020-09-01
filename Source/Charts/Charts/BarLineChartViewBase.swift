@@ -828,7 +828,7 @@ open class BarLineChartViewBase: ChartViewBase, BarLineScatterCandleBubbleChartD
         if matrix != originalMatrix
         {
             delegate?.chartTranslated?(self, dX: translation.x, dY: translation.y)
-            delegate?.chartTranslated?(self, centerX: visibleXRange / 2)
+            delegate?.chartTranslated?(self, centerX: lowestVisibleX + visibleXRange / 2)
         }
         
         // Did we managed to actually drag or did we reach the edge?
